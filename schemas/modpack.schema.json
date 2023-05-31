@@ -1,0 +1,57 @@
+{
+    "$id": "item.schema.json",
+    "description": "Describes an item in Backpack Hero",
+    "type": "object",
+    "required": [
+        "name"
+    ],
+    "properties": {
+        "name": {
+            "title": "Modpack Name",
+            "description": "Name of Modpack. This gets displayed in the modpack menu and on the item cards.",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "$ref": "#/refs/MultiLanguage"
+                }
+            ]
+        },
+        "description": {
+            "title": "Description",
+            "description": "Custom description to be displayed in the modpack menu.",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "$ref": "#/refs/MultiLanguage"
+                }
+            ]
+        },
+        "author": {
+            "title": "Modpack Author",
+            "description": "Author of the modpack. Gets displayed in the modpack menu.",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "$ref": "#/refs/MultiLanguage"
+                }
+            ]
+        },
+        "version": {
+            "title": "Modpack Version",
+            "description": "Version number of the modpack. Gets displayed in the modpack menu. Format should be something like this: `1.0.0`",
+            "type": "string"
+            
+        },
+        "website": {
+            "title": "URL",
+            "description": "A website, forum, discord server associated with the modpack. If set, modpack gets a 'Website' button on its entry in the modpack menu. Must be valid HTTP(S) URL",
+            "type": "string"
+        }
+    }
+}

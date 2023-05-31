@@ -1,0 +1,93 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "self"
+    },
+    {
+      "const": "adjacent"
+    },
+    {
+      "const": "diagonal"
+    },
+    {
+      "const": "top"
+    },
+    {
+      "const": "bottom"
+    },
+    {
+      "const": "column"
+    },
+    {
+      "const": "left"
+    },
+    {
+      "const": "right"
+    },
+    {
+      "const": "row"
+    },
+    {
+      "const": "board"
+    },
+    {
+      "const": "comboTarget"
+    },
+    {
+      "const": "oneSpaceOver"
+    },
+    {
+      "const": "connected"
+    },
+    {
+      "const": "rowThenColumn"
+    },
+    {
+      "const": "columnThenRow"
+    },
+    {
+      "const": "rightRotational"
+    },
+    {
+      "const": "bottomRotation"
+    },
+    {
+      "const": "leftRotational"
+    },
+    {
+      "const": "topRotational"
+    },
+    {
+      "const": "undefined"
+    },
+    {
+      "const": "ItemEffectArea"
+    },
+    {
+      "const": "myPlaySpace"
+    },
+    {
+      "const": "toteHand"
+    },
+    {
+      "const": "diagonalLine"
+    },
+    {
+      "const": "inThisPocket"
+    },
+    {
+      "const": "inAnotherPocket"
+    },
+    {
+      "const": "inAUniquePocket"
+    },
+    {
+      "const": "connectedViaType"
+    },
+    {
+      "const": "AnythingEvenOutOfGrid"
+    }
+  ],
+  "description": "Area to affect for trigger/modifier/effect"
+}

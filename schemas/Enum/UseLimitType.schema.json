@@ -1,0 +1,15 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "total"
+    },
+    {
+      "const": "perCombat"
+    },
+    {
+      "const": "perTurn"
+    }
+  ],
+  "description": "Type of Limit on Item Usage"
+}

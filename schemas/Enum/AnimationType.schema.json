@@ -1,0 +1,30 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Attack"
+    },
+    {
+      "const": "OverheadAttack"
+    },
+    {
+      "const": "UseItem"
+    },
+    {
+      "const": "Block"
+    },
+    {
+      "const": "Hurt"
+    },
+    {
+      "const": "FireArrow"
+    },
+    {
+      "const": "Command"
+    },
+    {
+      "const": "UseDefault"
+    }
+  ],
+  "description": "Animation that is played when an item is used"
+}

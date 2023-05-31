@@ -1,0 +1,15 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "all"
+    },
+    {
+      "const": "closest"
+    },
+    {
+      "const": "adjacent"
+    }
+  ],
+  "description": "Distance for [Area](Area.md)"
+}

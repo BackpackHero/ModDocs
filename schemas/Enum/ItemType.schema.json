@@ -1,0 +1,165 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Any"
+    },
+    {
+      "const": "Grid"
+    },
+    {
+      "const": "GridEmpty"
+    },
+    {
+      "const": "Weapon"
+    },
+    {
+      "const": "Armor"
+    },
+    {
+      "const": "Shield"
+    },
+    {
+      "const": "Accessory"
+    },
+    {
+      "const": "Bow"
+    },
+    {
+      "const": "Arrow"
+    },
+    {
+      "const": "Consumable"
+    },
+    {
+      "const": "Gold"
+    },
+    {
+      "const": "Mana"
+    },
+    {
+      "const": "Key"
+    },
+    {
+      "const": "Curse"
+    },
+    {
+      "const": "Ingredient"
+    },
+    {
+      "const": "Wand"
+    },
+    {
+      "const": "Book"
+    },
+    {
+      "const": "Cleaver"
+    },
+    {
+      "const": "Clothing"
+    },
+    {
+      "const": "Helmet"
+    },
+    {
+      "const": "Footwear"
+    },
+    {
+      "const": "Fish"
+    },
+    {
+      "const": "Relic"
+    },
+    {
+      "const": "Glove"
+    },
+    {
+      "const": "Magic"
+    },
+    {
+      "const": "Gem"
+    },
+    {
+      "const": "ManaStone"
+    },
+    {
+      "const": "Structure"
+    },
+    {
+      "const": "undefined"
+    },
+    {
+      "const": "Ring"
+    },
+    {
+      "const": "Rune"
+    },
+    {
+      "const": "Sigil"
+    },
+    {
+      "const": "Carving"
+    },
+    {
+      "const": "Component"
+    },
+    {
+      "const": "Potion"
+    },
+    {
+      "const": "Core"
+    },
+    {
+      "const": "Instrument"
+    },
+    {
+      "const": "Shuriken"
+    },
+    {
+      "const": "Plant"
+    },
+    {
+      "const": "Melee"
+    },
+    {
+      "const": "Drum"
+    },
+    {
+      "const": "Hammer"
+    },
+    {
+      "const": "Blessing"
+    },
+    {
+      "const": "Scary"
+    },
+    {
+      "const": "Pet"
+    },
+    {
+      "const": "Present"
+    },
+    {
+      "const": "Festive"
+    },
+    {
+      "const": "Totem"
+    },
+    {
+      "const": "Dart"
+    },
+    {
+      "const": "Kin"
+    },
+    {
+      "const": "Sap"
+    },
+    {
+      "const": "Treat"
+    },
+    {
+      "const": "Hazard"
+    }
+  ],
+  "description": "The type of the item. Some values, such as `Carving` or `Pet` are currently not-functional and may lead to game-crashes."
+}

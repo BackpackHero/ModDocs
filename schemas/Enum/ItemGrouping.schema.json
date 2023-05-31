@@ -1,0 +1,78 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Cleavers"
+    },
+    {
+      "const": "Melee"
+    },
+    {
+      "const": "Magic"
+    },
+    {
+      "const": "Archery"
+    },
+    {
+      "const": "Fish"
+    },
+    {
+      "const": "Spikes"
+    },
+    {
+      "const": "Keys"
+    },
+    {
+      "const": "Poison"
+    },
+    {
+      "const": "Hammers"
+    },
+    {
+      "const": "Shuriken"
+    },
+    {
+      "const": "Charmer"
+    },
+    {
+      "const": "Structure"
+    },
+    {
+      "const": "Alchemy"
+    },
+    {
+      "const": "Cursed"
+    },
+    {
+      "const": "Berserker"
+    },
+    {
+      "const": "Flame"
+    },
+    {
+      "const": "Armored"
+    },
+    {
+      "const": "Gold"
+    },
+    {
+      "const": "Shield"
+    },
+    {
+      "const": "Dodger"
+    },
+    {
+      "const": "Destructibles"
+    },
+    {
+      "const": "Pacifist"
+    },
+    {
+      "const": "Scratch"
+    },
+    {
+      "const": "Festive"
+    }
+  ],
+  "description": "This influences the RNG in the game to favor giving items of the same groupings as items in your inventory"
+}

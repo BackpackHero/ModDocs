@@ -1,0 +1,18 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Common"
+    },
+    {
+      "const": "Uncommon"
+    },
+    {
+      "const": "Rare"
+    },
+    {
+      "const": "Legendary"
+    }
+  ],
+  "description": "Rarity of the item. Relics are currently not supported"
+}

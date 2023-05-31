@@ -1,0 +1,7 @@
+.md-header{
+    background: #090a14  url('castle.png') bottom left repeat-x;
+    background-size:contain;    
+  }
+.md-typeset code{
+  word-break: keep-all;
+}

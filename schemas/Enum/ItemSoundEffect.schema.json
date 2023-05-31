@@ -1,0 +1,30 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "None"
+    },
+    {
+      "const": "cymbal"
+    },
+    {
+      "const": "flute"
+    },
+    {
+      "const": "guitar"
+    },
+    {
+      "const": "piano"
+    },
+    {
+      "const": "trumpet"
+    },
+    {
+      "const": "violin"
+    },
+    {
+      "const": "genericThud"
+    }
+  ],
+  "description": "Sound Effect that is played when an item is used"
+}

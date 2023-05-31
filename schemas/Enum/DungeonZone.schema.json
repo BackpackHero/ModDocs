@@ -1,0 +1,24 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "dungeon"
+    },
+    {
+      "const": "deepCave"
+    },
+    {
+      "const": "magmaCore"
+    },
+    {
+      "const": "EnchantedSwamp"
+    },
+    {
+      "const": "theBramble"
+    },
+    {
+      "const": "ice"
+    }
+  ],
+  "description": "A Zone (usually 3 Floors) of the dungeon"
+}

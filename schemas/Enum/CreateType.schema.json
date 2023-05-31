@@ -1,0 +1,36 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "set"
+    },
+    {
+      "const": "replace"
+    },
+    {
+      "const": "inOrder"
+    },
+    {
+      "const": "trueRandom"
+    },
+    {
+      "const": "byType"
+    },
+    {
+      "const": "inOpenSpace"
+    },
+    {
+      "const": "inOpenSpaceByType"
+    },
+    {
+      "const": "createCurse"
+    },
+    {
+      "const": "createBlessing"
+    },
+    {
+      "const": "inOpenSpaceRandom"
+    }
+  ],
+  "description": "How an item will be created"
+}

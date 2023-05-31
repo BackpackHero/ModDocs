@@ -1,0 +1,24 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Any"
+    },
+    {
+      "const": "Purse"
+    },
+    {
+      "const": "Satchel"
+    },
+    {
+      "const": "Tote"
+    },
+    {
+      "const": "CR8"
+    },
+    {
+      "const": "Pochette"
+    }
+  ],
+  "description": "A playable character"
+}
