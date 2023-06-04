@@ -1,0 +1,26 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Auto",
+      "description": "Automatically determines the mode"
+    },
+    {
+      "const": "UseLimitTotal",
+      "description": "Change Sprites based on Use Limit Total"
+    },
+    {
+      "const": "UseLimitTurn",
+      "description": "Change Sprites based on Use Limit Per Turn"
+    },
+    {
+      "const": "UseLimitCombat",
+      "description": "Change Sprites based on Use Limit Per Combat"
+    },
+    {
+      "const": "ManaStone",
+      "description": "Change Sprites based on Manastone Power"
+    }
+  ],
+  "description": ""
+}

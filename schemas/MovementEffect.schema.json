@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MovementEffect",
+    "type": "object",
+    "properties": {
+        "trigger": {
+            "$ref": "#/definitions/Trigger"
+        },
+        "affected_area": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Area"
+            }
+        },
+        "affected_area_distance": {
+            "$ref": "#/definitions/AreaDistance"
+        },
+        "x": {
+            "type": "integer"
+        },
+        "y": {
+            "type": "integer"
+        },
+        "rotation": {
+            "type": "integer"
+        },
+        "movement_type": {
+            "$ref": "#/definitions/MovementType"
+        },
+        "movement_length": {
+            "$ref": "#/definitions/MovementLength"
+        },
+        "description": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "$ref": "#/refs/MultiLanguage"
+                }
+            ],
+            "description": "Use, if the game cannot provide a description for this effect or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
+          }
+    },
+    "required": [
+        "trigger"
+    ]
+}

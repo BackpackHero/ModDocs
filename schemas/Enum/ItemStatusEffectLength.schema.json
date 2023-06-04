@@ -1,0 +1,24 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "whileActive"
+    },
+    {
+      "const": "turns"
+    },
+    {
+      "const": "combats"
+    },
+    {
+      "const": "permanent"
+    },
+    {
+      "const": "whileItemIsInInventory"
+    },
+    {
+      "const": "whileCoveredByHazards"
+    }
+  ],
+  "description": ""
+}

@@ -1,0 +1,12 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "global"
+    },
+    {
+      "const": "local"
+    }
+  ],
+  "description": ""
+}

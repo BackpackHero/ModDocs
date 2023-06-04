@@ -1,0 +1,15 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "oneSpace"
+    },
+    {
+      "const": "untilHit"
+    },
+    {
+      "const": "random"
+    }
+  ],
+  "description": ""
+}

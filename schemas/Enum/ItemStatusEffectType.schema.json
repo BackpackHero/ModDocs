@@ -1,0 +1,132 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "disabled"
+    },
+    {
+      "const": "enflamed"
+    },
+    {
+      "const": "locked"
+    },
+    {
+      "const": "heavy"
+    },
+    {
+      "const": "conductive"
+    },
+    {
+      "const": "buoyant"
+    },
+    {
+      "const": "projectile"
+    },
+    {
+      "const": "AddToManaCost"
+    },
+    {
+      "const": "AddToEnergyCost"
+    },
+    {
+      "const": "canBePlayedOverOtherItems"
+    },
+    {
+      "const": "ductTape"
+    },
+    {
+      "const": "canBeUsedByCR8Directly"
+    },
+    {
+      "const": "runsAutomaticallyOnCoreUse"
+    },
+    {
+      "const": "strengthBasedOnDistance"
+    },
+    {
+      "const": "cannotBeFoundInStores"
+    },
+    {
+      "const": "AddToGoldCost"
+    },
+    {
+      "const": "piercing"
+    },
+    {
+      "const": "cantBeSold"
+    },
+    {
+      "const": "spawnsEvent"
+    },
+    {
+      "const": "allowsItemsInIllusorySpaces"
+    },
+    {
+      "const": "CR8ChargesReverseWhenOffGrid"
+    },
+    {
+      "const": "canBeForged"
+    },
+    {
+      "const": "cannotBeRotated"
+    },
+    {
+      "const": "isActivated"
+    },
+    {
+      "const": "canBeMovedInCombat"
+    },
+    {
+      "const": "canBeMovedInCombatButReturnsToOriginalPosition"
+    },
+    {
+      "const": "allowsFreeMove"
+    },
+    {
+      "const": "petsAreSummonedBehindPochette"
+    },
+    {
+      "const": "canOnlyBeHeldByPochette"
+    },
+    {
+      "const": "effigy"
+    },
+    {
+      "const": "doubleScratch"
+    },
+    {
+      "const": "DiscardCarving"
+    },
+    {
+      "const": "BanishCarving"
+    },
+    {
+      "const": "Natural"
+    },
+    {
+      "const": "crackedBottle"
+    },
+    {
+      "const": "reverseHourglass"
+    },
+    {
+      "const": "invisbleCharge"
+    },
+    {
+      "const": "onFullInventory"
+    },
+    {
+      "const": "cannotBeLeft"
+    },
+    {
+      "const": "cannotBeDestroyed"
+    },
+    {
+      "const": "Cleansed"
+    },
+    {
+      "const": "cannotBeDisabledByHazards"
+    }
+  ],
+  "description": ""
+}

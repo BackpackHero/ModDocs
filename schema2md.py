@@ -30,11 +30,10 @@ def getType(data):
     if "type" in data:
         if data["type"]=="array":
             return "Array of "+getType(data["items"])
+        if "properties" in data:
+            return "Object containing: "+getType(data["properties"])
         if data["type"]=="object":
-            if "items" in data:
-                return "Object containing: "+getType(data["items"])
-            if "allOf" in data:
-                
+            if "allOf" in data:    
                 for all in data["allOf"]:
                     if typeStr!="": typeStr+=", "
                     typeStr+=getType(all)
@@ -53,7 +52,7 @@ def getType(data):
         if filename != None:
             link=os.path.relpath(filename, os.path.dirname(os.path.abspath(sys.argv[3]))).replace("\\","/")
         else:
-            link=""
+            link="NOTFOUND_"+data["$ref"].split("/")[-1]+".md"
         return  "[`"+data["$ref"].split("/")[-1]+"`]("+link+")"
 
         
@@ -94,13 +93,18 @@ if len(sys.argv)==4:
     for key,data in schema["properties"].items():
         field={}
         field["Field Name"]="`"+key+"`"
-        if key not in schema["required"]: 
+        if "required" not in schema or key not in schema["required"]: 
             field["Optional?"]=":material-check:"
         else: field["Optional?"]=""
         if "description" in data:
             field["Description"]=data["description"]
         else:
             field["Description"]=""
+        if "default" in data:
+            if field["Description"]!="":
+                field["Description"]+="<br>"
+            field["Description"]+="**Default value**: `"+str(data["default"])+"`"
+            print("WARNING: Description for",key,"empty!")
         field["Data Type"]=getType(data)
         fields.append(field)
 

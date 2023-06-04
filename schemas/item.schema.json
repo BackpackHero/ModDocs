@@ -24,20 +24,26 @@
         },
         "sprite": {
             "title": "Sprite",
-            "description": "Path to sprite of item, relative to the JSON file. Expected file format is PNG. If more than one path is specified, any subsequent sprites will be shown as the item runs out of uses `(use_limits)`.",
+            "description": "Path to sprite of item, relative to the JSON file. Expected file format is PNG. If more than one path is specified, any subsequent sprites will be changed based on `sprite_change_mode` (`use_limits`->`total` by default).",
             "oneOf": [
                 {
-                    "title":"File Name",
+                    "title": "File Name",
                     "type": "string"
                 },
                 {
                     "type": "array",
                     "items": {
                         "type": "string",
-                        "title":"File Name"
+                        "title": "File Name"
                     }
                 }
             ]
+        },
+        "sprite_change_mode": {
+            "title": "Sprite Change Mode",
+            "description": "If more than one sprite is specified, this controls how they will be used.",
+            "default":"auto",
+            "$ref": "#/refs/SpriteChangeMode"
         },
         "rarity": {
             "title": "Item Rarity",
@@ -95,11 +101,10 @@
                 }
             ]
         },
-        
-        
         "supported_characters": {
             "title": "Supported Characters",
             "description": "Array of supported characters. Item will only spawn for characters listed here. If Array is empty or contains 'any', it will spawn for all characters.",
+            "default":"any",
             "type": "array",
             "items": {
                 "$ref": "#/refs/Enum/Character"
@@ -114,47 +119,49 @@
             }
         },
         "use_costs": {
-            "type":"object",
-            "items":{"$ref": "#/refs/Enum/Cost"}
+            "description": "Object that contains the use costs of the item.",
+            "default":"{\"energy\":0}",
+            "$ref": "#/refs/Costs"
         },
         "animation": {
+            "description": "Player animation that gets played when the item is used.",
+            "default":"UseItem",
             "$ref": "#/refs/AnimationType"
         },
         "use_limits": {
-            "type": "array",
-            "items": {
-                "$ref": "#/refs/LimtedUses"
-            }
+            "description": "Use limits (e.g. 3 uses per Combat)",
+            "$ref": "#/refs/LimitedUses"
         },
         "combat_effects": {
+            "description": "Effects that perform a combat action, e.g. Attack, Block, Poison.",
             "type": "array",
             "items": {
-                "type": "object",
-                "allOf": [
-                    {
-                        "$ref": "#/refs/Trigger"
-                    },
-                    {
-                        "$ref": "#/refs/Effect"
-                    }
-                ]
+                "$ref": "#/refs/CombatEffect"
+            }
+        },
+        "modifiers": {
+            "description": "Effects that perform a combat action, e.g. Attack, Block, Poison.",
+            "type": "array",
+            "items": {
+                "$ref": "#/refs/Modifier"
+            }
+        },
+        "add_modifiers": {
+            "type": "array",
+            "items": {
+                "$ref": "#/refs/AddModifier"
             }
         },
         "create_effects": {
             "type": "array",
             "items": {
-                "type": "object",
-                "allOf": [
-                    {
-                        "$ref": "#/refs/Trigger"
-                    },
-                    {
-                        "$ref": "#/refs/CreateType"
-                    },
-                    {
-                        "$ref": "#/refs/CreateType"
-                    }
-                ]
+                "$ref": "#/refs/CreateEffect"
+            }
+        },
+        "item_status_effects": {
+            "type": "array",
+            "items": {
+                "$ref": "#/refs/ItemStatusEffect"
             }
         }
     }

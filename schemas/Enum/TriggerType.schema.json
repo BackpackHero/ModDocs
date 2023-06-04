@@ -1,0 +1,153 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "constant"
+    },
+    {
+      "const": "onUse"
+    },
+    {
+      "const": "onCombo"
+    },
+    {
+      "const": "onDestroy"
+    },
+    {
+      "const": "onAdd"
+    },
+    {
+      "const": "onRemove"
+    },
+    {
+      "const": "onTurnStart"
+    },
+    {
+      "const": "onTurnEnd"
+    },
+    {
+      "const": "onCombatStart"
+    },
+    {
+      "const": "onCombatEnd"
+    },
+    {
+      "const": "onKillEnemy"
+    },
+    {
+      "const": "onStart"
+    },
+    {
+      "const": "onRotate"
+    },
+    {
+      "const": "onOutOfUses"
+    },
+    {
+      "const": "onComboSelect"
+    },
+    {
+      "const": "onComboUse"
+    },
+    {
+      "const": "onTakeDamage"
+    },
+    {
+      "const": "constantEarly"
+    },
+    {
+      "const": "useEarly"
+    },
+    {
+      "const": "onKillNonSummonEnemy"
+    },
+    {
+      "const": "onMovePast"
+    },
+    {
+      "const": "onMoveFinish"
+    },
+    {
+      "const": "onMoveCollide"
+    },
+    {
+      "const": "onFullCharge"
+    },
+    {
+      "const": "onMoveCombat"
+    },
+    {
+      "const": "onScratch"
+    },
+    {
+      "const": "onSummonCarving"
+    },
+    {
+      "const": "constantClearWhile"
+    },
+    {
+      "const": "useLate"
+    },
+    {
+      "const": "whenAttacked"
+    },
+    {
+      "const": "onSummonCarvingLate"
+    },
+    {
+      "const": "onSummonCarvingEarly"
+    },
+    {
+      "const": "onDie"
+    },
+    {
+      "const": "constantExtraEarly"
+    },
+    {
+      "const": "onDiscard"
+    },
+    {
+      "const": "onClearCarvings"
+    },
+    {
+      "const": "whenScripted"
+    },
+    {
+      "const": "onSummonPet"
+    },
+    {
+      "const": "onSummonAnyPet"
+    },
+    {
+      "const": "onPetDies"
+    },
+    {
+      "const": "onEnemyAsleep"
+    },
+    {
+      "const": "whenZombied"
+    },
+    {
+      "const": "whenAnEnemyIsDefeated"
+    },
+    {
+      "const": "endOfActions"
+    },
+    {
+      "const": "whenManaFlowsThrough"
+    },
+    {
+      "const": "onFirstUse"
+    },
+    {
+      "const": "whenLeftBehind"
+    },
+    {
+      "const": "onAlternateUse"
+    },
+    {
+      "const": "whenNotPlayed"
+    }
+  ],
+  "description": ""
+}

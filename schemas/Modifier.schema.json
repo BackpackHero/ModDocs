@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Trigger",
+    "type": "object",
+    "properties": {
+      "trigger": {
+        "$ref": "#/refs/Trigger"
+      },
+      "effects": {
+        "type": "array",
+        "items": {
+          "$ref": "#/refs/Effect"
+        },
+        "minItems": 1
+      },
+      "mod_types": {
+        "type": "array",
+        "items": {
+          "$ref": "#/refs/ItemType"
+        }
+      },
+      "mod_area": {
+        "type": "array",
+        "items": {
+          "$ref": "#/refs/Area"
+        }
+      },
+      "mod_distance": {
+        "$ref": "#/refs/AreaDistance"
+      },
+      "length": {
+        "$ref": "#/refs/ModifierLength"
+      },
+      "mod_length": {
+        "$ref": "#/refs/ModifierLength"
+      },
+      "description": {
+        "oneOf": [
+            {
+                "type": "string"
+            },
+            {
+                "$ref": "#/refs/MultiLanguage"
+            }
+        ],
+        "description": "Use, if the game cannot provide a description for this modifier or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
+      }
+    },
+    "required": ["trigger", "effects"]
+  }

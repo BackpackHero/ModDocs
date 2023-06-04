@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "properties": {
+        "energy":{"type":"integer"},
+        "mana":{"type":"integer"},
+        "gold":{"type":"integer"}
+    }
+}

@@ -1,0 +1,51 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "unspecified"
+    },
+    {
+      "const": "player"
+    },
+    {
+      "const": "enemy"
+    },
+    {
+      "const": "allEnemies"
+    },
+    {
+      "const": "everyone"
+    },
+    {
+      "const": "reactiveEnemy"
+    },
+    {
+      "const": "allFriendlies"
+    },
+    {
+      "const": "adjacentFriendlies"
+    },
+    {
+      "const": "friendliesInFront"
+    },
+    {
+      "const": "friendliesBehind"
+    },
+    {
+      "const": "statusFromItem"
+    },
+    {
+      "const": "frontmostFriendly"
+    },
+    {
+      "const": "backmostFriendly"
+    },
+    {
+      "const": "truePlayer"
+    },
+    {
+      "const": "everyoneButPochette"
+    }
+  ],
+  "description": ""
+}

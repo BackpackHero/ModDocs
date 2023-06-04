@@ -4,13 +4,13 @@ extra_css: [assets/style.css]
 
 nav:
   - Home: index.md
-  - Installing Mods: How to Install Mods
-  - Creating Mods: How to Create Mods
+  - Installing Mods: How_to_Install_Mods
+  - Creating Mods: How_to_Create_Mods
   - JSON Reference:
-    - JSON Reference/Modpack.md
-    - Items: JSON Reference/Items/
-    - Enums: JSON Reference/Enums/
-    - Misc: JSON Reference/Misc/
+    - JSON_Reference/Modpack.md
+    - Items: JSON_Reference/Items/
+    - Enums: JSON_Reference/Enums/
+    - Misc: JSON_Reference/Misc/
 
 plugins:
   - search

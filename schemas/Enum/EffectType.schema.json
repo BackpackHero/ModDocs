@@ -1,0 +1,177 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "Damage"
+    },
+    {
+      "const": "Block"
+    },
+    {
+      "const": "HP"
+    },
+    {
+      "const": "AP"
+    },
+    {
+      "const": "MaxHP"
+    },
+    {
+      "const": "Luck"
+    },
+    {
+      "const": "Poison"
+    },
+    {
+      "const": "Regen"
+    },
+    {
+      "const": "Spikes"
+    },
+    {
+      "const": "Haste"
+    },
+    {
+      "const": "Slow"
+    },
+    {
+      "const": "Rage"
+    },
+    {
+      "const": "Weak"
+    },
+    {
+      "const": "resetUses"
+    },
+    {
+      "const": "resetUsesPerCombat"
+    },
+    {
+      "const": "resetUsesPerTurn"
+    },
+    {
+      "const": "ToughHide"
+    },
+    {
+      "const": "xxxOLD2xxx"
+    },
+    {
+      "const": "xxxOLD3xxx"
+    },
+    {
+      "const": "Destroy"
+    },
+    {
+      "const": "Activate"
+    },
+    {
+      "const": "AddToStack"
+    },
+    {
+      "const": "ModifierMultiplier"
+    },
+    {
+      "const": "Vampire"
+    },
+    {
+      "const": "ItemStatusEffect"
+    },
+    {
+      "const": "Mana"
+    },
+    {
+      "const": "Dodge"
+    },
+    {
+      "const": "AddCharge"
+    },
+    {
+      "const": "ResetCharges"
+    },
+    {
+      "const": "AllStatusEffects"
+    },
+    {
+      "const": "AddDamageToScratch"
+    },
+    {
+      "const": "AddToMaxMana"
+    },
+    {
+      "const": "DrawToteCarvings"
+    },
+    {
+      "const": "xxxOldxxx"
+    },
+    {
+      "const": "DiscardCarving"
+    },
+    {
+      "const": "Burn"
+    },
+    {
+      "const": "BanishCarving"
+    },
+    {
+      "const": "ChangeCostOfReorganize"
+    },
+    {
+      "const": "Charm"
+    },
+    {
+      "const": "Sleep"
+    },
+    {
+      "const": "Freeze"
+    },
+    {
+      "const": "GetGold"
+    },
+    {
+      "const": "MaxHPPassive"
+    },
+    {
+      "const": "SummonPet"
+    },
+    {
+      "const": "RevivePets"
+    },
+    {
+      "const": "AddFood"
+    },
+    {
+      "const": "AddMaterial"
+    },
+    {
+      "const": "AddTreasure"
+    },
+    {
+      "const": "AddPopulation"
+    },
+    {
+      "const": "AddGiftItem"
+    },
+    {
+      "const": "ChangeCostOfClear"
+    },
+    {
+      "const": "Zombie"
+    },
+    {
+      "const": "ClearItemStatusEffectOfType"
+    },
+    {
+      "const": "ManaToSelfOnly"
+    },
+    {
+      "const": "Exhaust"
+    },
+    {
+      "const": "Cleanse"
+    },
+    {
+      "const": "Curse"
+    }
+  ],
+  "description": ""
+}

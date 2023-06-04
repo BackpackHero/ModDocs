@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Trigger",
+    "type": "object",
+    "properties": {
+      "trigger": {
+        "$ref": "#/refs/TriggerType"
+      },
+      "trigger_on_type": {
+        "type": "array",
+        "items": {
+          "$ref": "#/refs/ItemType"
+        }
+      },
+      "trigger_area": {
+        "type": "array",
+        "items": {
+          "$ref": "#/refs/Area"
+        }
+      },
+      "trigger_distance": {
+        "$ref": "#/refs/AreaDistance"
+      },
+      "needs_activation": {
+        "type": "boolean"
+      },
+      "trigger_description": {
+        "oneOf": [
+            {
+                "type": "string"
+            },
+            {
+                "$ref": "#/refs/MultiLanguage"
+            }
+        ],
+        "description": "Use, if the game cannot provide a description for this trigger or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
+      }
+    },
+    "required": ["trigger"]
+  }

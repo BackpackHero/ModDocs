@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        
+        "type": {
+            "$ref": "#/definitions/ItemStatusEffectType"
+        },
+        "length": {
+            "$ref": "#/definitions/ItemStatusEffectLength"
+        },
+        "value": {
+            "type": "number"
+        },
+        "applyRightAway": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "type"
+    ]
+}

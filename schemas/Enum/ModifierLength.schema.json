@@ -1,0 +1,39 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "whileActive"
+    },
+    {
+      "const": "forTurn"
+    },
+    {
+      "const": "forCombat"
+    },
+    {
+      "const": "untilRotate"
+    },
+    {
+      "const": "untilUse"
+    },
+    {
+      "const": "permanent"
+    },
+    {
+      "const": "whileComboing"
+    },
+    {
+      "const": "twoTurns"
+    },
+    {
+      "const": "untilDiscard"
+    },
+    {
+      "const": "whileItemIsInInventory"
+    },
+    {
+      "const": "untilUnzombied"
+    }
+  ],
+  "description": ""
+}

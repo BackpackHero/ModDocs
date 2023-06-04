@@ -30,7 +30,7 @@ The folder is normally here: `<Your Steam Library Path>\steamapps\common\Backpac
 }
 
 ```
-There are more options you can set in this file. See [Modpack Metadata](../JSON%20Reference/Modpack.md) for more info.
+There are more options you can set in this file. See [Modpack Metadata](../JSON_Reference/Modpack.md) for more info.
 
 **Step 4:** If you have a logo for your modpack, place it in the same folder as `logo.png`. The logo must be **exactly** 32 x 32px in size.
 
