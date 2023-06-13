@@ -4,16 +4,16 @@
     "type": "object",
     "properties": {
         "trigger": {
-            "$ref": "#/definitions/Trigger"
+            "$ref": "Trigger.schema.json"
         },
         "affected_area": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/Area"
+                "$ref": "Enum/Area.schema.json"
             }
         },
         "affected_area_distance": {
-            "$ref": "#/definitions/AreaDistance"
+            "$ref": "Enum/AreaDistance.schema.json"
         },
         "x": {
             "type": "integer"
@@ -25,10 +25,10 @@
             "type": "integer"
         },
         "movement_type": {
-            "$ref": "#/definitions/MovementType"
+            "$ref": "Enum/MovementType.schema.json"
         },
         "movement_length": {
-            "$ref": "#/definitions/MovementLength"
+            "$ref": "Enum/MovementLength.schema.json"
         },
         "description": {
             "oneOf": [
@@ -36,7 +36,7 @@
                     "type": "string"
                 },
                 {
-                    "$ref": "#/refs/MultiLanguage"
+                    "$ref": "MultiLanguage.schema.json"
                 }
             ],
             "description": "Use, if the game cannot provide a description for this effect or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."

@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "Trigger.schema.json"
+        },
+        {
+            "$ref": "Effect.schema.json"
+        }
+    ]
+}

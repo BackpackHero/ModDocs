@@ -3,10 +3,10 @@
     "properties": {
         
         "type": {
-            "$ref": "#/definitions/ItemStatusEffectType"
+            "$ref": "Enum/ItemStatusEffectType.schema.json"
         },
         "length": {
-            "$ref": "#/definitions/ItemStatusEffectLength"
+            "$ref": "Enum/ItemStatusEffectLength.schema.json"
         },
         "value": {
             "type": "number"

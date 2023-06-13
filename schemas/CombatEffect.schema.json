@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "Trigger.schema.json"
+        },
+        {
+            "$ref": "Effect.schema.json"
+        }
+    ],
+    "defaultSnippets": [
+        {
+            "label": "1. Combat Effect",
+            "body": { "trigger": "${1:onUse}", "type":"${2:Destroy}"}
+        },
+        {
+            "label": "2. Combat Effect (With Value)",
+            "body": { "trigger": "${1:onUse}", "type":"${2:Block}","value":"^${3:5}"}
+        },
+        {
+            "label": "3. Combat Effect (Extended Trigger)",
+            "body": { "trigger": "${1:onUse}", "trigger_on_type":["${2:Any}"],"trigger_area":["${3:self}"],"trigger_distance":"${4:all}","needs_activation":"^${5:false}","type":"$0"}
+        },
+        {
+            "label": "4. Combat Effect (Item Status Effect)",
+            "body": { "trigger": "${1:onUse}","type":"ItemStatusEffect","item_status_effects":[{"type":"$0"}]}
+        }
+    ]
+}

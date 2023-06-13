@@ -8,9 +8,6 @@
 from markdownTable import markdownTable
 import json, sys, os
 
-
-
-
 # table structure:
 # schema:  name, optional, description, types
 # enum: name, description
@@ -48,12 +45,12 @@ def getType(data):
             typeStr+=getType(one)
         return typeStr
     if "$ref" in data:
-        filename=find_file_path(data["$ref"].split("/")[-1]+".md",os.getcwd())
+        filename=find_file_path(data["$ref"].split(".schema")[0].split("/")[-1]+".md",os.getcwd())
         if filename != None:
             link=os.path.relpath(filename, os.path.dirname(os.path.abspath(sys.argv[3]))).replace("\\","/")
         else:
             link="NOTFOUND_"+data["$ref"].split("/")[-1]+".md"
-        return  "[`"+data["$ref"].split("/")[-1]+"`]("+link+")"
+        return  "[`"+data["$ref"].split(".schema")[0].split("/")[-1]+"`]("+link+")"
 
         
 
@@ -84,29 +81,60 @@ if sys.argv[1]=="enum":
 
 
 
+def ProcessSchema(schema, filename):
+    if "allOf" in schema:
+        for data in schema["allOf"]:
+            if "$ref" in data:
+                field={}
+                field["Field Name"]=""
+                field["Optional?"]=""
+                field["Description"]="<h3>**Fields from **"+getType(data)+"</h3>"
+                field["Data Type"]=""
+                fields.append(field)
+                ProcessSchema(json.load(open(os.path.dirname(filename)+"/"+data["$ref"])),filename)
+            if "properties" in data:
+                field={}
+                field["Field Name"]=""
+                field["Optional?"]=""
+                if "title" in data:
+                    field["Description"]="<h3>**"+data["title"]+"**</h3>"
+                else:
+                    field["Description"]="<h3>**Fields from **`"+"`"+filename.split(".schema")[0].split("/")[-1]+"``</h3>"
+                
+                field["Data Type"]=""
+                fields.append(field)
+                ProcessSchema(data,filename)
+            
+
+    if "properties" in schema:
+        for key,data in schema["properties"].items():
+            field={}
+            field["Field Name"]="`"+key+"`"
+            if "required" not in schema or key not in schema["required"]: 
+                field["Optional?"]=":material-check:"
+            else: field["Optional?"]=""
+            if "description" in data:
+                field["Description"]=data["description"]
+            else:
+                field["Description"]=""
+            if "default" in data:
+                if field["Description"]!="":
+                    field["Description"]+="<br>"
+                field["Description"]+="**Default value**: `"+str(data["default"])+"`"
+                print("WARNING: Description for",key,"empty!")
+            field["Data Type"]=getType(data)
+            fields.append(field)
+
+
 print("Generating markdown for",sys.argv[1])
 schema=json.load(open(sys.argv[1]))
 des=""
 if "description" in schema:
     des=schema["description"]
+
 if len(sys.argv)==4:
-    for key,data in schema["properties"].items():
-        field={}
-        field["Field Name"]="`"+key+"`"
-        if "required" not in schema or key not in schema["required"]: 
-            field["Optional?"]=":material-check:"
-        else: field["Optional?"]=""
-        if "description" in data:
-            field["Description"]=data["description"]
-        else:
-            field["Description"]=""
-        if "default" in data:
-            if field["Description"]!="":
-                field["Description"]+="<br>"
-            field["Description"]+="**Default value**: `"+str(data["default"])+"`"
-            print("WARNING: Description for",key,"empty!")
-        field["Data Type"]=getType(data)
-        fields.append(field)
+    ProcessSchema(schema,sys.argv[1])
+    
 
 markdown=open(sys.argv[2],"r").read()
 os.makedirs(os.path.dirname(sys.argv[3]), exist_ok=True)

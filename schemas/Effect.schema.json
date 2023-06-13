@@ -5,7 +5,7 @@
     "properties": {
       "type": {
         "description": "Type of the effect, e.g `poison`",
-        "$ref": "#/refs/EffectType"
+        "$ref": "Enum/EffectType.schema.json"
       },
       "value": {
         "description": "How much of the effect to add e.g. **5** poison. This field is optional for effects that do not have a numerical value.",
@@ -15,7 +15,7 @@
       "target": {
         "description": "Target of the effect, (e.g `player`)",
         "default":"unspecified",
-        "$ref": "#/refs/EffectTarget"
+        "$ref": "Enum/EffectTarget.schema.json"
       },
       "math": {
         "description": "Whether the effect should be summative or multiplicative. E.g. is it +5 poison or 5x poison",
@@ -26,7 +26,7 @@
       "item_status_effects": {
         "type": "array",
         "items": {
-          "$ref": "#/refs/ItemStatusEffect"
+          "$ref": "ItemStatusEffect.schema.json"
         }
       },
       "description": {
@@ -35,7 +35,7 @@
                 "type": "string"
             },
             {
-                "$ref": "#/refs/MultiLanguage"
+                "$ref": "MultiLanguage.schema.json"
             }
         ],
         "description": "Use, if the game cannot provide a description for this effect or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."

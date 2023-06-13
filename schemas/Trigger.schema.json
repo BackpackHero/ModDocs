@@ -4,22 +4,22 @@
     "type": "object",
     "properties": {
       "trigger": {
-        "$ref": "#/refs/TriggerType"
+        "$ref": "Enum/TriggerType.schema.json"
       },
       "trigger_on_type": {
         "type": "array",
         "items": {
-          "$ref": "#/refs/ItemType"
+          "$ref": "Enum/ItemType.schema.json"
         }
       },
       "trigger_area": {
         "type": "array",
         "items": {
-          "$ref": "#/refs/Area"
+          "$ref": "Enum/Area.schema.json"
         }
       },
       "trigger_distance": {
-        "$ref": "#/refs/AreaDistance"
+        "$ref": "Enum/AreaDistance.schema.json"
       },
       "needs_activation": {
         "type": "boolean"
@@ -30,7 +30,7 @@
                 "type": "string"
             },
             {
-                "$ref": "#/refs/MultiLanguage"
+                "$ref": "MultiLanguage.schema.json"
             }
         ],
         "description": "Use, if the game cannot provide a description for this trigger or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
