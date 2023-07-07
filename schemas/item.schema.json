@@ -1,235 +1,331 @@
 {
-    "$id": "Item.schema.json", 
-    "description": "Describes an item in Backpack Hero", 
-    "type": "object", 
+    "$id": "Item.schema.json",
+    "description": "Describes an item in Backpack Hero",
+    "type": "object",
     "allOf": [
         {
-            "title": "General Settings", 
-            "required": ["name", "type", "sprite", "shape"], 
+            "title": "General Settings",
+            "required": [
+                "name",
+                "type",
+                "sprite",
+                "shape"
+            ],
             "properties": {
                 "name": {
-                    "title": "Item Name", 
-                    "description": "Name of the item", 
+                    "title": "Item Name",
+                    "description": "Name of the item",
                     "defaultSnippets": [
-                        {"label": "Simple Text", "body": "$0"}, 
                         {
-                            "label": "Muliple Languages", 
-                            "body": {"English": "$0"}
-                        }
-                    ], 
-                    "oneOf": [
-                        {"type": "string"}                   , 
-                        {"$ref": "MultiLanguage.schema.json"}  
-                    ]
-                }, 
-                "sprite": {
-                    "title": "Sprite", 
-                    "description": "Path to sprite of item, relative to the JSON file. Expected file format is PNG. If more than one path is specified, any subsequent sprites will be changed based on `sprite_change_mode` (`use_limits`->`total` by default).", 
-                    "oneOf": [
+                            "label": "Simple Text",
+                            "body": "$0"
+                        },
                         {
-                            "title" : "File Name"    , 
-                            "format": "uri-reference", 
-                            "type"  : "string"         
-                        }, 
-                        {
-                            "type": "array", 
-                            "items": {
-                                "type"  : "string"       , 
-                                "format": "uri-reference", 
-                                "title" : "File Name"      
+                            "label": "Muliple Languages",
+                            "body": {
+                                "English": "$0"
                             }
                         }
-                    ], 
-                    "defaultSnippets": [
-                        { "label": "Single Filename"  , "body": "$0.png"   }, 
-                        { "label": "Muliple Filenames", "body": ["$0.png"] }  
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "$ref": "MultiLanguage.schema.json"
+                        }
                     ]
-                }, 
+                },
+                "sprite": {
+                    "title": "Sprite",
+                    "description": "Path to sprite of item, relative to the JSON file. Expected file format is PNG. If more than one path is specified, any subsequent sprites will be changed based on `sprite_change_mode` (`use_limits`->`total` by default). If no sprite is specified, the game generates a placeholder sprite based on the item `shape`.",
+                    "oneOf": [
+                        {
+                            "title": "File Name",
+                            "format": "uri-reference",
+                            "type": "string"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uri-reference",
+                                "title": "File Name"
+                            }
+                        }
+                    ],
+                    "defaultSnippets": [
+                        {
+                            "label": "Single Filename",
+                            "body": "$0.png"
+                        },
+                        {
+                            "label": "Muliple Filenames",
+                            "body": [
+                                "$0.png"
+                            ]
+                        }
+                    ]
+                },
                 "sprite_change_mode": {
-                    "title": "Sprite Change Mode", 
-                    "description": "If more than one sprite is specified, this controls how they will be used.", 
-                    "default": "Auto", 
+                    "title": "Sprite Change Mode",
+                    "description": "If more than one sprite is specified, this controls how they will be used.",
+                    "default": "Auto",
                     "$ref": "Enum/SpriteChangeMode.schema.json"
-                }, 
+                },
                 "rarity": {
-                    "title"      : "Item Rarity"            , 
-                    "default"    : "Common"                 , 
-                    "description": "Rarity of the item"     , 
-                    "$ref"       : "Enum/Rarity.schema.json"  
-                }, 
+                    "title": "Item Rarity",
+                    "default": "Common",
+                    "description": "Rarity of the item",
+                    "$ref": "Enum/Rarity.schema.json"
+                },
                 "shape": {
-                    "title": "Shape", 
-                    "description": "Shape of the item, drawn in ASCII as an Array of Strings. One string represents one row of spaces, each character in each string represents a single space. Valid characters are '-' for empty space and 'X' for filled space.", 
-                    "type": "array", 
+                    "title": "Shape",
+                    "description": "Shape of the item, drawn in ASCII as an Array of Strings. One string represents one row of spaces, each character in each string represents a single space. Valid characters are '-' for empty space and 'X' for filled space.",
+                    "type": "array",
                     "items": {
-                        "type"   : "string"        , 
-                        "title"  : "Shape as ASCII", 
-                        "pattern": "(?=.*X)^[-X]+$"  
-                    }, 
-                    "minItems": 1, 
+                        "type": "string",
+                        "title": "Shape as ASCII",
+                        "pattern": "(?=.*X)^[-X]+$"
+                    },
+                    "minItems": 1,
                     "defaultSnippets": [
-                        { "body": ["X"] }
+                        {
+                            "body": [
+                                "X"
+                            ]
+                        }
                     ]
-                }, 
+                },
                 "type": {
-                    "title": "Item Types", 
-                    "description": "Array of item types for this item.", 
-                    "type": "array", 
-                    "items": {"$ref": "Enum/ItemType.schema.json"}
-                }, 
+                    "title": "Item Types",
+                    "description": "Array of item types for this item. A few types such as `Carving`,`Curse`,`Blessing` and `Relic` put the item into a special pool of items that can then only be found in the appropriate scenario.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "Enum/ItemType.schema.json"
+                    }
+                },
                 "group": {
-                    "title": "Item Groupings", 
-                    "description": "Array of item groupings for this item. This influences the RNG in the game to favor giving items of the same groupings as items in your inventory", 
-                    "type": "array", 
-                    "items": {"$ref": "Enum/ItemGrouping.schema.json"}
-                }, 
+                    "title": "Item Groupings",
+                    "description": "Array of item groupings for this item. This influences the RNG in the game to favor giving items of the same groupings as items in your inventory",
+                    "type": "array",
+                    "items": {
+                        "$ref": "Enum/ItemGrouping.schema.json"
+                    }
+                },
                 "description": {
-                    "title": "Description", 
-                    "description": "Custom description to be displayed in the card alongside auto-generated descriptions", 
+                    "title": "Description",
+                    "description": "Custom description to be displayed in the card alongside auto-generated descriptions",
                     "oneOf": [
-                        {"type": "string"}                              , 
-                        {"$ref": "MultiLanguageDescription.schema.json"}  
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "$ref": "MultiLanguageDescription.schema.json"
+                        }
                     ]
-                }, 
+                },
                 "flavor": {
-                    "title": "Flavor Text", 
-                    "description": "Flavor text of the item. Gets displayed in an italic font on the bottom of the item card. Put funny jokes and references here. :)", 
+                    "title": "Flavor Text",
+                    "description": "Flavor text of the item. Gets displayed in an italic font on the bottom of the item card. Put funny jokes and references here. :)",
                     "oneOf": [
-                        {"type": "string"}                   , 
-                        {"$ref": "MultiLanguage.schema.json"}  
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "$ref": "MultiLanguage.schema.json"
+                        }
                     ]
-                }, 
+                },
                 "animation": {
-                    "description": "Player animation that gets played when the item is used.", 
-                    "default": "UseItem", 
+                    "description": "Player animation that gets played when the item is used.",
+                    "default": "UseItem",
                     "$ref": "Enum/AnimationType.schema.json"
-                }, 
+                },
                 "soundeffect": {
-                    "description": "Sound Effect that is played when the item is used.", 
-                    "default": "None", 
+                    "description": "Sound Effect that is played when the item is used.",
+                    "default": "None",
                     "$ref": "Enum/ItemSoundEffect.schema.json"
                 }
             }
-        }, 
+        },
         {
-            "title": "Item Dungeon Spawn Behavior", 
+            "title": "Item Dungeon Spawn Behavior",
             "properties": {
                 "findable": {
-                    "description": "If `false`, the item cannot be found in the game naturally (combat rewards, shops, chest etc). It can only be spawned by an event of a `CreateEffect` of another item.", 
-                    "default": true, 
+                    "description": "If `false`, the item cannot be found in the game naturally (combat rewards, shops, chest etc). It can only be spawned by an event of a `CreateEffect` of another item.",
+                    "default": true,
                     "type": "boolean"
-                }, 
+                },
                 "supported_characters": {
-                    "title": "Supported Characters", 
-                    "description": "Array of supported characters. Item will only spawn for characters listed here. If Array is empty or contains 'any', it will spawn for all characters.", 
-                    "default": "any", 
-                    "type": "array", 
-                    "items": {"$ref": "Enum/Character.schema.json"}
-                }, 
+                    "title": "Supported Characters",
+                    "description": "Array of supported characters. Item will only spawn for characters listed here. If Array is empty or contains 'any', it will spawn for all characters.",
+                    "default": "any",
+                    "type": "array",
+                    "items": {
+                        "$ref": "Enum/Character.schema.json"
+                    }
+                },
                 "found_in": {
-                    "title": "Found in", 
-                    "description": "Array of DungeonZones the item can naturally spawn in. If this is empty, it will spawn anywhere.", 
-                    "type": "array", 
-                    "items": {"$ref": "Enum/DungeonZone.schema.json"}
+                    "title": "Found in",
+                    "description": "Array of DungeonZones the item can naturally spawn in. If this is empty, it will spawn anywhere.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "Enum/DungeonZone.schema.json"
+                    }
                 }
             }
-        }, 
+        },
         {
-            "title": "Item Behavior", 
+            "title": "Item Behavior",
             "properties": {
                 "use_costs": {
-                    "description": "Object that contains the use costs of the item.", 
-                    "default": "{\"energy\":0}` if item has `OnUse` trigger. Else, `{}", 
+                    "description": "Object that contains the use costs of the item.",
+                    "default": "{\"energy\":0}` if item has `OnUse` trigger. Else, `{}",
                     "$ref": "Costs.schema.json"
-                }, 
+                },
                 "use_limits": {
-                    "description": "Use limits (e.g. 3 uses per Combat)", 
-                    "$ref"       : "LimitedUses.schema.json"              
-                }, 
-                "combat_effects": {
-                    "description": "Effects that perform a combat action, e.g. Attack, Block, Poison.", 
-                    "type": "array", 
-                    "items": {"$ref": "CombatEffect.schema.json"}
-                }, 
-                "modifiers": {
-                    "description": "Effects that perform a combat action, e.g. Attack, Block, Poison.", 
-                    "type": "array", 
-                    "items": {"$ref": "Modifier.schema.json"}
-                }, 
-                "add_modifiers": {
-                    "type": "array", 
-                    "items": {"$ref": "AddModifier.schema.json"}
-                }, 
-                "movement_effects": {
-                    "type": "array", 
-                    "items": {"$ref": "MovementEffect.schema.json"}
-                }, 
-                "create_effects": {
-                    "type": "array", 
-                    "items": {"$ref": "CreateEffect.schema.json"}
-                }, 
+                    "description": "Use limits (e.g. 3 uses per Combat)",
+                    "$ref": "LimitedUses.schema.json"
+                },
                 "item_status_effects": {
-                    "type": "array", 
-                    "items": {"$ref": "ItemStatusEffect.schema.json"}
+                    "description": "`ItemStatusEffects` that are active when the item spawns. This can include things like `Heavy` or `Floating`, or properties like `canBeForged` or `canBeMovedInCombat`",
+                    "type": "array",
+                    "items": {
+                        "$ref": "ItemStatusEffect.schema.json"
+                    }
+                },
+                "combat_effects": {
+                    "description": "Effects that perform a combat action, e.g. Attack, Block, Poison.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "CombatEffect.schema.json"
+                    }
+                },
+                "modifiers": {
+                    "description": "Effects that modify a property of this or other items. E.g. if your effect is 5 `Damage` it would add 5 damage to the item, rather than attacking the enemy for 5",
+                    "type": "array",
+                    "items": {
+                        "$ref": "Modifier.schema.json"
+                    }
+                },
+                "add_modifiers": {
+                    "description": "This let's you add modifiers to this or other items. You could e.g. say 'Every diagonal item has a modifier that disables every item adjacent to it.'",
+                    "type": "array",
+                    "items": {
+                        "$ref": "AddModifier.schema.json"
+                    }
+                },
+                "movement_effects": {
+                    "description": "Effects about moving the item around in the inventory. This is not to be confused with 'movable' which defines the ability to move the item by hand",
+                    "type": "array",
+                    "items": {
+                        "$ref": "MovementEffect.schema.json"
+                    }
+                },
+                "create_effects": {
+                    "description": "Effects that create items. This could be used to spawn items on use, or to replace the item with another one when it is destroyed",
+                    "type": "array",
+                    "items": {
+                        "$ref": "CreateEffect.schema.json"
+                    }
                 }
             }
-        }, 
+        },
         {
-            "title": "Extra Modules", 
+            "title": "Extra Modules",
             "properties": {
-                "manastone": {"$ref": "Modules/Manastone.schema.json"}
+                "movable": {
+                    "description": "Properties about the item being movable with the cursor, e.g. playable on other items during combat. Not to be confused with `MovementEffects`, which move the item automatically based on a trigger.",
+                    "$ref": "Modules/Movable.schema.json"
+                },
+                "manastone": {
+                    "description": "Properties about manastone functionality, like current and max mana. This is mandetory if the Item `type` includes `ManaStone`",
+                    "$ref": "Modules/Manastone.schema.json"
+                },
+                "carving": {
+                    "description": "Properties about carving functionality, like summon cost. This is mandetory if the Item `type` includes `Carving`",
+                    "$ref": "Modules/Carving.schema.json"
+                }
             }
         }
-    ], 
+    ],
     "if": {
         "properties": {
-          "type": {
-            "contains": {
-              "type": "string",
-              "const": "ManaStone"
+            "type": {
+                "contains": {
+                    "type": "string",
+                    "const": "ManaStone"
+                }
             }
-          }
         }
-      },
-      "then": {
+    },
+    "then": {
         "required": [
-          "manastone"
+            "manastone"
         ]
-      },
-
+    },
     "defaultSnippets": [
         {
-            "label": "Item (Basic)", 
-            "description": "Creates an item with only the required properties", 
+            "label": "Item (Basic)",
+            "description": "Creates an item with only the required properties",
             "body": {
-                "name": "${1:Item Name}", 
-                "type": ["${2:Weapon}"], 
-                "shape": ["X"], 
-                "rarity": "${3:Common}", 
+                "name": "${1:Item Name}",
+                "type": [
+                    "${2:Weapon}"
+                ],
+                "shape": [
+                    "X"
+                ],
+                "rarity": "${3:Common}",
                 "sprite": "$4.png"
             }
-        }, 
+        },
         {
-            "label": "Item (Extended)", 
-            "description": "Creates an item with the most popular properties and localization", 
+            "label": "Item (Extended)",
+            "description": "Creates an item with the most popular properties and localization",
             "body": {
-                "name": {"English": "${1:Item Name}"}, 
-                "type": ["${2:Weapon}"], 
-                "group": ["${3:Melee}"], 
-                "rarity": "${4:Common}", 
-                "shape": ["X"], 
-                "sprite": ["$5.png"], 
-                "sprite_change_mode": "${6:Auto}", 
-                "flavor": {"English": "${7:Flavor text}"}, 
-                "animation": "${8:Attack}", 
-                "use_costs": "^{\"${9:energy}\":${10:1}}", 
-                "use_limits": "^{$11}", 
-                "combat_effects": ["^$12"], 
-                "modifiers": ["^$13"], 
-                "add_modifiers": ["^$14"], 
-                "movement_effects": ["^$15"], 
-                "create_effects": ["^$16"], 
-                "item_status_effects": ["^$17"]
+                "name": {
+                    "English": "${1:Item Name}"
+                },
+                "type": [
+                    "${2:Weapon}"
+                ],
+                "group": [
+                    "${3:Melee}"
+                ],
+                "rarity": "${4:Common}",
+                "shape": [
+                    "X"
+                ],
+                "sprite": [
+                    "$5.png"
+                ],
+                "sprite_change_mode": "${6:Auto}",
+                "flavor": {
+                    "English": "${7:Flavor text}"
+                },
+                "animation": "${8:Attack}",
+                "use_costs": "^{\"${9:energy}\":${10:1}}",
+                "use_limits": "^{$11}",
+                "combat_effects": [
+                    "^$12"
+                ],
+                "modifiers": [
+                    "^$13"
+                ],
+                "add_modifiers": [
+                    "^$14"
+                ],
+                "movement_effects": [
+                    "^$15"
+                ],
+                "create_effects": [
+                    "^$16"
+                ],
+                "item_status_effects": [
+                    "^$17"
+                ]
             }
         }
     ]

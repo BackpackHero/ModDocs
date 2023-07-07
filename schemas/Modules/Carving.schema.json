@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "required": [
+        "summon_costs"
+    ],
+    "properties": {
+        "summon_costs": {
+            "description": "Object that contains the summon costs of the carving.",
+            "type": "array",
+            "items": {"$ref":"../Enum/Cost.schema.json"},
+            "default":"{\"energy\":1}"
+        }
+    },
+    "defaultSnippets":[
+        {
+            "label":"Carving",
+            "body":{
+                "summon_costs":  {"energy":1}
+            }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "area": {
+            "description": "Area the item can be moved to",
+            "$ref":"../Enum/Area.schema.json",
+            "default":"self"
+        },
+        "distance": {
+            "description": "Distance the area expands to",
+            "$ref":"../Enum/AreaDistance.schema.json",
+            "default":"all"
+        },
+        "place_on_type": {
+            "description": "The item type this item can be placed on. Use this with the `ItemStatusEffect` `canBePlayedOverOtherItems`",
+            "$ref":"../Enum/ItemType.schema.json",
+            "default":"Grid"
+        },
+        "place_on_type_combat": {
+            "description": "The item type this item can be placed on in combat. Use this with the `ItemStatusEffect`s `canBePlayedOverOtherItems` and `canBeMovedInCombat`",
+            "$ref":"../Enum/ItemType.schema.json",
+            "default":"Grid"
+        }
+    },
+    "defaultSnippets":[
+        {
+            
+        }
+    ]
+}

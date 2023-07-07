@@ -5,7 +5,50 @@
             "$ref": "Trigger.schema.json"
         },
         {
-            "$ref": "Effect.schema.json"
+            "properties": {
+
+                "create_type":{
+                    "$ref":"Enum/CreateType.schema.json"
+                },
+                "create_areas":{
+                    "type":"array",
+                    "items":{"$ref":"Enum/Area.schema.json"}
+                    
+                },
+                "create_items":{
+                    "type":"array",
+                    "items":{"oneOf": [
+                        {
+                            "type": "string",
+                            "title":"Item Name"
+                        },
+                        {
+                            "$ref": "ItemDefinition.schema.json"
+                        }
+                    ]}
+                    
+                },
+                "create_types":{
+                    "type":"array",
+                    "items":{"$ref":"Enum/ItemType.schema.json"}
+                    
+                },
+                "create_rarities":{
+                    "type":"array",
+                    "items":{"$ref":"Enum/Rarity.schema.json"}
+                },
+                "description": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "$ref": "MultiLanguage.schema.json"
+                        }
+                    ],
+                    "description": "Use, if the game cannot provide a description for this create effect or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
+                  }
+            }
         }
     ]
 }

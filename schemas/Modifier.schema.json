@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Trigger",
+    "title": "Modifier",
     "type": "object",
     "allOf": [
         {
@@ -9,6 +9,7 @@
         {
             "properties": {
                 "effects": {
+                    "description": "Effects that get applied for this modifier. These are indirect effects. E.g. `+2 Damage` does not attack the enemy for 2 Damage. Instead it increases the affected item's damage power by 2. <br> Only the first effect in this array gets shown on the item card, but all get executed. If you need all of them to show on the item card, put them in seperate modifiers.",
                     "type": "array",
                     "items": {
                         "$ref": "Effect.schema.json"
@@ -16,18 +17,24 @@
                     "minItems": 1
                 },
                 "mod_types": {
+                    "description": "Item Types this modifier affects",
+                    "default":["Any"],
                     "type": "array",
                     "items": {
                         "$ref": "Enum/ItemType.schema.json"
                     }
                 },
                 "mod_area": {
+                    "description": "Area this modifier affects",
+                    "default":["self"],
                     "type": "array",
                     "items": {
                         "$ref": "Enum/Area.schema.json"
                     }
                 },
                 "mod_distance": {
+                    "description": "Defines the distance the mod_area checks. E.g. if your area is `column` and your distance is `closest`, it would only affect the item in this column that's closest to the item this modifier originates from.",
+                    "default":"all",
                     "$ref": "Enum/AreaDistance.schema.json"
                 },
                 "length": {
@@ -35,6 +42,11 @@
                 },
                 "mod_length": {
                     "$ref": "Enum/ModifierLength.schema.json"
+                },
+                "stackable": {
+                    "description": "If this is true, effects from this modifier can be stacked. E.g. if a modifier like `If a fish is adjacent to this, +1 Block to self` has the `stackable` property, and there are 3 adjacent fish, the affected item will get +3 block.",
+                    "default":"false",
+                    "type":"boolean"
                 },
                 "description": {
                     "oneOf": [

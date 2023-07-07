@@ -8,9 +8,6 @@
 from markdownTable import markdownTable
 import json, sys, os
 
-# table structure:
-# schema:  name, optional, description, types
-# enum: name, description
 fields=[]
 
 
@@ -117,11 +114,11 @@ def ProcessSchema(schema, filename):
                 field["Description"]=data["description"]
             else:
                 field["Description"]=""
+                print("WARNING: Description for",key,"empty!")
             if "default" in data:
                 if field["Description"]!="":
                     field["Description"]+="<br>"
                 field["Description"]+="**Default value**: `"+str(data["default"])+"`"
-                print("WARNING: Description for",key,"empty!")
             field["Data Type"]=getType(data)
             fields.append(field)
 

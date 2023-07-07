@@ -2,46 +2,50 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "MovementEffect",
     "type": "object",
-    "properties": {
-        "trigger": {
+    "allOf": [
+        {
             "$ref": "Trigger.schema.json"
         },
-        "affected_area": {
-            "type": "array",
-            "items": {
-                "$ref": "Enum/Area.schema.json"
-            }
-        },
-        "affected_area_distance": {
-            "$ref": "Enum/AreaDistance.schema.json"
-        },
-        "x": {
-            "type": "integer"
-        },
-        "y": {
-            "type": "integer"
-        },
-        "rotation": {
-            "type": "integer"
-        },
-        "movement_type": {
-            "$ref": "Enum/MovementType.schema.json"
-        },
-        "movement_length": {
-            "$ref": "Enum/MovementLength.schema.json"
-        },
-        "description": {
-            "oneOf": [
-                {
-                    "type": "string"
+        {
+            "properties": {
+                "affected_area": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Enum/Area.schema.json"
+                    }
                 },
-                {
-                    "$ref": "MultiLanguage.schema.json"
+                "affected_area_distance": {
+                    "$ref": "Enum/AreaDistance.schema.json"
+                },
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                },
+                "rotation": {
+                    "type": "integer"
+                },
+                "movement_type": {
+                    "$ref": "Enum/MovementType.schema.json"
+                },
+                "movement_length": {
+                    "$ref": "Enum/MovementLength.schema.json"
+                },
+                "description": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "$ref": "MultiLanguage.schema.json"
+                        }
+                    ],
+                    "description": "Use, if the game cannot provide a description for this effect or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
                 }
-            ],
-            "description": "Use, if the game cannot provide a description for this effect or if you want to override it. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."
-          }
-    },
+            }
+        }
+    ],
     "required": [
         "trigger"
     ]
