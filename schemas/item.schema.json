@@ -8,7 +8,6 @@
             "required": [
                 "name",
                 "type",
-                "sprite",
                 "shape"
             ],
             "properties": {
