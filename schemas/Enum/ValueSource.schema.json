@@ -1,0 +1,177 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "AP"
+    },
+    {
+      "const": "EXP"
+    },
+    {
+      "const": "Level"
+    },
+    {
+      "const": "Gold"
+    },
+    {
+      "const": "Floor"
+    },
+    {
+      "const": "Loop"
+    },
+    {
+      "const": "PlayerHP"
+    },
+    {
+      "const": "PlayerMaxHP"
+    },
+    {
+      "const": "PlayerBlock"
+    },
+    {
+      "const": "PlayerBurn"
+    },
+    {
+      "const": "PlayerFreeze"
+    },
+    {
+      "const": "PlayerPoison"
+    },
+    {
+      "const": "PlayerHaste"
+    },
+    {
+      "const": "PlayerSlow"
+    },
+    {
+      "const": "PlayerWeak"
+    },
+    {
+      "const": "PlayerRage"
+    },
+    {
+      "const": "PlayerDodge"
+    },
+    {
+      "const": "PlayerRegen"
+    },
+    {
+      "const": "PlayerSpikes"
+    },
+    {
+      "const": "TargetHP"
+    },
+    {
+      "const": "TargetMaxHP"
+    },
+    {
+      "const": "TargetBlock"
+    },
+    {
+      "const": "TargetBurn"
+    },
+    {
+      "const": "TargetFreeze"
+    },
+    {
+      "const": "TargetPoison"
+    },
+    {
+      "const": "TargetHaste"
+    },
+    {
+      "const": "TargetSlow"
+    },
+    {
+      "const": "TargetWeak"
+    },
+    {
+      "const": "TargetRage"
+    },
+    {
+      "const": "TargetDodge"
+    },
+    {
+      "const": "TargetRegen"
+    },
+    {
+      "const": "TargetSpikes"
+    },
+    {
+      "const": "TargetCharm"
+    },
+    {
+      "const": "TargetSleep"
+    },
+    {
+      "const": "TargetToughHide"
+    },
+    {
+      "const": "ManastonePower"
+    },
+    {
+      "const": "ManastoneMaxPower"
+    },
+    {
+      "const": "ManastoneConnectedPower"
+    },
+    {
+      "const": "ManastoneConnectedMaxPower"
+    },
+    {
+      "const": "numOfEnemies"
+    },
+    {
+      "const": "numOfEnemiesDefeated"
+    },
+    {
+      "const": "numOfPetsAlive"
+    },
+    {
+      "const": "numOfPetsDefeated"
+    },
+    {
+      "const": "numOfPets"
+    },
+    {
+      "const": "enemyTargetPosition"
+    },
+    {
+      "const": "numOfTurns"
+    },
+    {
+      "const": "numOfItems"
+    },
+    {
+      "const": "numOfItemTypes"
+    },
+    {
+      "const": "carvingsPlayed"
+    },
+    {
+      "const": "carvingsInDiscard"
+    },
+    {
+      "const": "getSizeOfItem"
+    },
+    {
+      "const": "numOfPockets"
+    },
+    {
+      "const": "numOfSpacesInThisPocket"
+    },
+    {
+      "const": "numOfSpacesInAllOtherPockets"
+    },
+    {
+      "const": "numOfPocketsInArea"
+    },
+    {
+      "const": "numOfItemsInThisPouch"
+    },
+    {
+      "const": "numOfCursesOnThisItem"
+    }
+  ],
+  "description": "Source where the value for this ValueChanger is pulled from"
+}

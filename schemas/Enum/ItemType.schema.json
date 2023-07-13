@@ -161,5 +161,5 @@
       "const": "Hazard"
     }
   ],
-  "description": "The type of the item. Some values, such as `Carving` or `Pet` are currently not-functional and may lead to game-crashes."
+  "description": "The type of the item. Some values, such as `Pet` are currently not-functional and may lead to game-crashes. "
 }

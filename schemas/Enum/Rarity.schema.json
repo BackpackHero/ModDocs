@@ -14,5 +14,5 @@
       "const": "Legendary"
     }
   ],
-  "description": "Rarity of the item. Relics are currently not supported"
+  "description": "Rarity of the item."
 }
