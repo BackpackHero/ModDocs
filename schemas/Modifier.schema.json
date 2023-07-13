@@ -38,9 +38,8 @@
                     "$ref": "Enum/AreaDistance.schema.json"
                 },
                 "length": {
-                    "$ref": "Enum/ModifierLength.schema.json"
-                },
-                "mod_length": {
+                    "description": "Length that this modifier applies for",
+                    "default":"whileActive",
                     "$ref": "Enum/ModifierLength.schema.json"
                 },
                 "stackable": {

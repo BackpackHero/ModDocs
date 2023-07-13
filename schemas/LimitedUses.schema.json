@@ -1,8 +1,35 @@
 {
     "type": "object",
     "properties": {
-        "perTurn":{"type":"integer"},
-        "perCombat":{"type":"integer"},
-        "total":{"type":"integer"}
+        "perTurn": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
+        },
+        "perCombat": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
+        },
+        "total": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
+        }
     }
 }

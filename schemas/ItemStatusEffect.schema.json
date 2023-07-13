@@ -9,7 +9,14 @@
             "$ref": "Enum/ItemStatusEffectLength.schema.json"
         },
         "value": {
-            "type": "number"
+            "oneOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
         },
         "applyRightAway": {
             "type": "boolean"

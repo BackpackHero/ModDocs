@@ -1,6 +1,9 @@
 # Enums
 python schema2md.py enum schemas/Enum/ schema_md_templates/enum.md "docs/JSON_Reference/Enums/"
 
+# Misc Components
+python schema2md.py schemas/ValueChanger.schema.json schema_md_templates/ValueChanger.md "docs/JSON_Reference/Misc/ValueChanger.md"
+
 # Item Components
 python schema2md.py schemas/Costs.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Costs.md"
 python schema2md.py schemas/LimitedUses.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/LimitedUses.md"

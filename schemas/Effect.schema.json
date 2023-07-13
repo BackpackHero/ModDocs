@@ -10,7 +10,14 @@
       "value": {
         "description": "How much of the effect to add e.g. **5** poison. This field is optional for effects that do not have a numerical value.",
         "default":0,
-        "type": "number"
+        "oneOf": [
+          {
+              "type": "number"
+          },
+          {
+              "$ref": "ValueChanger.schema.json"
+          }
+      ]
       },
       "target": {
         "description": "Target of the effect, (e.g `player`)",

@@ -7,7 +7,7 @@
         {
             "properties": {
 
-                "create_type":{
+                "type":{
                     "$ref":"Enum/CreateType.schema.json"
                 },
                 "create_areas":{
@@ -34,8 +34,21 @@
                     
                 },
                 "create_rarities":{
+                    "description": "This is used when creating items by type to determine which Rarity the spawned item(s) can have.",
                     "type":"array",
                     "items":{"$ref":"Enum/Rarity.schema.json"}
+                },
+                "number_of_items":{
+                    "description": "Number of items to create",
+                    "default":1,
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "$ref": "ValueChanger.schema.json"
+                        }
+                    ]
                 },
                 "description": {
                     "oneOf": [

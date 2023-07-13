@@ -1,8 +1,35 @@
 {
     "type": "object",
     "properties": {
-        "energy":{"type":"integer"},
-        "mana":{"type":"integer"},
-        "gold":{"type":"integer"}
+        "energy": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
+        },
+        "mana": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
+        },
+        "gold": {
+            "oneOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "$ref": "ValueChanger.schema.json"
+                }
+            ]
+        }
     }
 }

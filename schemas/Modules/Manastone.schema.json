@@ -11,7 +11,7 @@
                     "type": "integer"
                 },
                 {
-                    "$ref": "../Misc/ValueChanger.schema.json"
+                    "$ref": "../ValueChanger.schema.json"
                 }
             ]
         },
@@ -22,7 +22,7 @@
                     "type": "integer"
                 },
                 {
-                    "$ref": "../Misc/ValueChanger.schema.json"
+                    "$ref": "../ValueChanger.schema.json"
                 }
             ]
         },"description": {

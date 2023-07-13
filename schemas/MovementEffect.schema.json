@@ -18,13 +18,35 @@
                     "$ref": "Enum/AreaDistance.schema.json"
                 },
                 "x": {
-                    "type": "integer"
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "$ref": "ValueChanger.schema.json"
+                        }
+                    ]
                 },
                 "y": {
-                    "type": "integer"
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "$ref": "ValueChanger.schema.json"
+                        }
+                    ]
                 },
                 "rotation": {
-                    "type": "integer"
+                    "description": "Rotation of the movement effects, in quarter rotation steps. `1` is 90° clockwise, `4` is a full rotation. Same applies to `ValueChangers` if used.",
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "$ref": "ValueChanger.schema.json"
+                        }
+                    ]
                 },
                 "movement_type": {
                     "$ref": "Enum/MovementType.schema.json"
