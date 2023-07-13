@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Trigger",
+    "title": "AddModifier",
     "type": "object",
     "allOf": [
         {
@@ -8,32 +8,25 @@
         },
         {
             "properties": {
-                "effects": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "Effect.schema.json"
-                    },
-                    "minItems": 1
+                "modifier": {
+                    "$ref": "Modifier.schema.json"
                 },
-                "mod_types": {
+                "addmod_types": {
                     "type": "array",
                     "items": {
                         "$ref": "Enum/ItemType.schema.json"
                     }
                 },
-                "mod_area": {
+                "addmod_area": {
                     "type": "array",
                     "items": {
                         "$ref": "Enum/Area.schema.json"
                     }
                 },
-                "mod_distance": {
+                "addmod_distance": {
                     "$ref": "Enum/AreaDistance.schema.json"
                 },
-                "length": {
-                    "$ref": "Enum/ModifierLength.schema.json"
-                },
-                "mod_length": {
+                "addmod_length": {
                     "$ref": "Enum/ModifierLength.schema.json"
                 },
                 "description": {
@@ -49,7 +42,7 @@
                 }
             },
             "required": [
-                "effects"
+                "modifier"
             ]
         }
     ]
