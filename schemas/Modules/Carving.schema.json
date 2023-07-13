@@ -9,6 +9,12 @@
             "type": "array",
             "items": {"$ref":"../Enum/Cost.schema.json"},
             "default":"{\"energy\":1}"
+        },
+        "sell_costs": {
+            "description": "Object that contains the costs to sell the carving from the context menu.",
+            "type": "array",
+            "items": {"$ref":"../Enum/Cost.schema.json"},
+            "default":"{\"gold\":3}"
         }
     },
     "defaultSnippets":[
