@@ -21,6 +21,7 @@ python schema2md.py schemas/Modules/Manastone.schema.json schema_md_templates/ge
 python schema2md.py schemas/Modules/Carving.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/Carving.md"
 
 python schema2md.py schemas/Item.schema.json schema_md_templates/item.md "docs/JSON_Reference/Items/Item.md"
+python schema2md.py schemas/Item.schema.json schema_md_templates/item.md "docs/JSON_Reference/Items/index.md"
 python schema2md.py schemas/modpack.schema.json schema_md_templates/modpack.md "docs/JSON_Reference/Modpack.md"
 
 mkdocs build

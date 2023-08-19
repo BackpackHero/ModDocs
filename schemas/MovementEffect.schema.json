@@ -9,15 +9,20 @@
         {
             "properties": {
                 "affected_area": {
+                    "description": "Items in this area are affected by this movement effect",
+                    "default":["self"],
                     "type": "array",
                     "items": {
                         "$ref": "Enum/Area.schema.json"
                     }
                 },
                 "affected_area_distance": {
+                    "description": "Distance the `affected_area` expands to",
                     "$ref": "Enum/AreaDistance.schema.json"
                 },
                 "x": {
+                    "description": "Horizontal component of the movement. Negative values move left, Positive Values move right",
+                    "default":0,
                     "oneOf": [
                         {
                             "type": "integer"
@@ -28,6 +33,8 @@
                     ]
                 },
                 "y": {
+                    "description": "Vertical component of the movement. Negative values move up, positive values move down",
+                    "default":0,
                     "oneOf": [
                         {
                             "type": "integer"
@@ -39,6 +46,7 @@
                 },
                 "rotation": {
                     "description": "Rotation of the movement effects, in quarter rotation steps. `1` is 90° clockwise, `4` is a full rotation. Same applies to `ValueChangers` if used.",
+                    "default":0,
                     "oneOf": [
                         {
                             "type": "integer"
@@ -49,9 +57,12 @@
                     ]
                 },
                 "movement_type": {
+                    "description": "Whether to translate the movements globally or locally. Meaning if the movement is relative to the items current rotation.",
+                    "default":"global",
                     "$ref": "Enum/MovementType.schema.json"
                 },
                 "movement_length": {
+                    "description": "How many times this movement should occur.",
                     "$ref": "Enum/MovementLength.schema.json"
                 },
                 "description": {

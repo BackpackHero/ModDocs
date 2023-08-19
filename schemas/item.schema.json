@@ -72,6 +72,11 @@
                     "default": "Auto",
                     "$ref": "Enum/SpriteChangeMode.schema.json"
                 },
+                "sprite_scale": {
+                    "description": "Scale of the sprite in pixels per grid-block. Allows you to override the default scaling to make higher resolution (or lower resolution) sprites.",
+                    "type":"integer",
+                    "default": 16
+                },
                 "rarity": {
                     "title": "Item Rarity",
                     "default": "Common",
@@ -80,12 +85,12 @@
                 },
                 "shape": {
                     "title": "Shape",
-                    "description": "Shape of the item, drawn in ASCII as an Array of Strings. One string represents one row of spaces, each character in each string represents a single space. Valid characters are '-' for empty space and 'X' for filled space.",
+                    "description": "Shape of the item, drawn in ASCII as an Array of Strings. One string represents one row of spaces, each character in each string represents a single space. Valid characters are '-' for empty space and 'X' for filled space.<br> You can also define an ItemEffectArea using the character 'A'.",
                     "type": "array",
                     "items": {
                         "type": "string",
                         "title": "Shape as ASCII",
-                        "pattern": "(?=.*X)^[-X]+$"
+                        "pattern": "(?=.*[XB])[-XBA]+$"
                     },
                     "minItems": 1,
                     "defaultSnippets": [
@@ -111,18 +116,6 @@
                     "items": {
                         "$ref": "Enum/ItemGrouping.schema.json"
                     }
-                },
-                "description": {
-                    "title": "Description",
-                    "description": "Custom description to be displayed in the card alongside auto-generated descriptions",
-                    "oneOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "$ref": "MultiLanguageDescription.schema.json"
-                        }
-                    ]
                 },
                 "flavor": {
                     "title": "Flavor Text",
@@ -195,7 +188,7 @@
                     }
                 },
                 "combat_effects": {
-                    "description": "Effects that perform a combat action, e.g. Attack, Block, Poison.",
+                    "description": "Effects that perform a combat action, e.g. Damage, Block, Poison.",
                     "type": "array",
                     "items": {
                         "$ref": "CombatEffect.schema.json"

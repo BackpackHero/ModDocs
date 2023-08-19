@@ -6,14 +6,12 @@
     "properties": {
         "summon_costs": {
             "description": "Object that contains the summon costs of the carving.",
-            "type": "array",
-            "items": {"$ref":"../Enum/Cost.schema.json"},
+            "$ref": "../Costs.schema.json",
             "default":"{\"energy\":1}"
         },
         "sell_costs": {
             "description": "Object that contains the costs to sell the carving from the context menu.",
-            "type": "array",
-            "items": {"$ref":"../Enum/Cost.schema.json"},
+            "$ref": "../Costs.schema.json",
             "default":"{\"gold\":3}"
         }
     },

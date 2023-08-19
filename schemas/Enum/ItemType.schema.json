@@ -159,6 +159,21 @@
     },
     {
       "const": "Hazard"
+    },
+    {
+      "const": "FloppyDisk"
+    },
+    {
+      "const": "Etching"
+    },
+    {
+      "const": "Hymn"
+    },
+    {
+      "const": "Fragment"
+    },
+    {
+      "const": "Loot"
     }
   ],
   "description": "The type of the item. Some values, such as `Pet` are currently not-functional and may lead to game-crashes. "

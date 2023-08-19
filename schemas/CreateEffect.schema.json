@@ -8,14 +8,18 @@
             "properties": {
 
                 "type":{
+                    "description": "How the item(s) will be spawned",
+                    "default":"set",
                     "$ref":"Enum/CreateType.schema.json"
                 },
                 "create_areas":{
+                    "description": "Areas to create the item in",
                     "type":"array",
                     "items":{"$ref":"Enum/Area.schema.json"}
                     
                 },
                 "create_items":{
+                    "description": "List of specific items to spawn.",
                     "type":"array",
                     "items":{"oneOf": [
                         {
@@ -29,12 +33,14 @@
                     
                 },
                 "create_types":{
+                    "description": "Used with `byType` and `inOpenSpaceByType`. Item Types in this list are considered for which item to spawn.",
                     "type":"array",
                     "items":{"$ref":"Enum/ItemType.schema.json"}
                     
                 },
                 "create_rarities":{
                     "description": "This is used when creating items by type to determine which Rarity the spawned item(s) can have.",
+                    "default":["Common","Uncommon","Rare","Legendary"],
                     "type":"array",
                     "items":{"$ref":"Enum/Rarity.schema.json"}
                 },

@@ -18,6 +18,10 @@
                 }
             ]
         },
+        "internal_name": {
+            "description": "Internal name of the modpack. This is used to identify your modpack from other modpacks, for example in create effects (See ItemDefinition).<br>**Please choose a descriptive name to avoid conflicts with other modpacks.**<br>**When left blank, the game used the folder name as internal name.**",
+            "type": "string"
+        },
         "description": {
             "title": "Description",
             "description": "Custom description to be displayed in the modpack menu.",
@@ -46,7 +50,6 @@
             "title": "Modpack Version",
             "description": "Version number of the modpack. Gets displayed in the modpack menu. Format should be something like this: `1.0.0`",
             "type": "string"
-            
         },
         "website": {
             "title": "URL",

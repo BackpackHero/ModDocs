@@ -53,12 +53,6 @@
       "const": "ToughHide"
     },
     {
-      "const": "xxxOLD2xxx"
-    },
-    {
-      "const": "xxxOLD3xxx"
-    },
-    {
       "const": "Destroy"
     },
     {
@@ -99,9 +93,6 @@
     },
     {
       "const": "DrawToteCarvings"
-    },
-    {
-      "const": "xxxOldxxx"
     },
     {
       "const": "DiscardCarving"
@@ -171,6 +162,15 @@
     },
     {
       "const": "Curse"
+    },
+    {
+      "const": "Duplicate"
+    },
+    {
+      "const": "RemoveFromGrid"
+    },
+    {
+      "const": "NextTurnAP"
     }
   ],
   "description": ""

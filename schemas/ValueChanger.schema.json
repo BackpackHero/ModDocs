@@ -38,7 +38,7 @@
             "title": "item name"
           },
           {
-            "$ref": "../Misc/ItemDefinition.schema.json"
+            "$ref": "ItemDefinition.schema.json"
           }
         ]
       }

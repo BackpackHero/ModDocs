@@ -126,6 +126,42 @@
     },
     {
       "const": "cannotBeDisabledByHazards"
+    },
+    {
+      "const": "countAsEmpty"
+    },
+    {
+      "const": "ghostly"
+    },
+    {
+      "const": "invincible"
+    },
+    {
+      "const": "energyCarriesBetweenTurns"
+    },
+    {
+      "const": "cannotPlaceItemsOfSameTypeAdjacent"
+    },
+    {
+      "const": "roundDamageTo1"
+    },
+    {
+      "const": "takingDamageDoesStartOfTurnEffects"
+    },
+    {
+      "const": "pauperRun"
+    },
+    {
+      "const": "cannotGainGold"
+    },
+    {
+      "const": "blockIsNotRemoved"
+    },
+    {
+      "const": "scalingEnergy"
+    },
+    {
+      "const": "statusEffectsAreConvertedToBurn"
     }
   ],
   "description": ""

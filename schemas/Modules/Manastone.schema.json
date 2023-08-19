@@ -31,7 +31,7 @@
                     "type": "string"
                 },
                 {
-                    "$ref": "MultiLanguage.schema.json"
+                    "$ref": "../MultiLanguage.schema.json"
                 }
             ],
             "description": "Use, if you want to provide an additional description for this Manastone. See [Custom Descriptions](../Creating_Mods/Custom_Descriptions.md) for more info."

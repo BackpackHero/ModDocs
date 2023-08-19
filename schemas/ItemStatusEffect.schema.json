@@ -3,12 +3,17 @@
     "properties": {
         
         "type": {
+            "description": "Type of the item status effect",
             "$ref": "Enum/ItemStatusEffectType.schema.json"
         },
         "length": {
+            "default":"permanent",
+            "description": "Length this item status effect is active for.",
             "$ref": "Enum/ItemStatusEffectLength.schema.json"
         },
         "value": {
+            "default":0,
+            "description": "Value for the item status effect. Some effect types do not require a value.",
             "oneOf": [
                 {
                     "type": "number"

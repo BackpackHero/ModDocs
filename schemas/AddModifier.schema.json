@@ -9,24 +9,33 @@
         {
             "properties": {
                 "modifier": {
+                    "description": "The Modifier that's going to be applied to item(s) as set up by the types/area/distance",
                     "$ref": "Modifier.schema.json"
                 },
                 "addmod_types": {
+                    "description": "Item types this modifier gets applied to",
+                    "default":["Any"],
                     "type": "array",
                     "items": {
                         "$ref": "Enum/ItemType.schema.json"
                     }
                 },
                 "addmod_area": {
+                    "description": "Area this modifier applies to",
+                    "default":["self"],
                     "type": "array",
                     "items": {
                         "$ref": "Enum/Area.schema.json"
                     }
                 },
                 "addmod_distance": {
+                    "default":["all"],
+                    "description": "Distance the `addmod_area` expands to",
                     "$ref": "Enum/AreaDistance.schema.json"
                 },
                 "addmod_length": {
+                    "default":"whileActive",
+                    "description": "Length of the AddModifier",
                     "$ref": "Enum/ModifierLength.schema.json"
                 },
                 "description": {

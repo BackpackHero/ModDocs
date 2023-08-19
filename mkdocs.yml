@@ -4,17 +4,20 @@ extra_css: [assets/style.css]
 
 nav:
   - Home: index.md
-  - Installing Mods: How_to_Install_Mods
+  - Installing Mods: Installing Mods.md
   - Creating Mods: How_to_Create_Mods
   - JSON Reference:
     - JSON_Reference/Modpack.md
-    - Items: JSON_Reference/Items/
+    - Items: 
+      - JSON_Reference/Items/index.md
+      - JSON_Reference/Items/
     - Enums: JSON_Reference/Enums/
     - Misc: JSON_Reference/Misc/
 
 plugins:
   - search
-  - include_dir_to_nav
+  - include_dir_to_nav:
+      file_pattern: '^(?!index\.md$|Item\.md$).*\.md$'
 
 theme:
   name: material
@@ -37,7 +40,8 @@ theme:
   
    # primary: red
   features:
-    - navigation.instant
+   # - navigation.instant
+    - navigation.indexes
     - navigation.sections
    # - navigation.expand
     - navigation.top

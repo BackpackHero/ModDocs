@@ -4,24 +4,32 @@
     "type": "object",
     "properties": {
       "trigger": {
+        "description": "Type of trigger",
         "$ref": "Enum/TriggerType.schema.json"
       },
       "trigger_on_type": {
+        "description": "This trigger happens for items that have an item type in this list",
+        "default":["Any"],
         "type": "array",
         "items": {
           "$ref": "Enum/ItemType.schema.json"
         }
       },
       "trigger_area": {
+        "description": "This trigger happens for items that are in an area in this list",
+        "default":["self"],
         "type": "array",
         "items": {
           "$ref": "Enum/Area.schema.json"
         }
       },
       "trigger_distance": {
+        "description": "Area distance to apply to the Areas in trigger_area. This further narrows the area radius to closest or adjacent items.",
+        "default":"all",
         "$ref": "Enum/AreaDistance.schema.json"
       },
       "needs_activation": {
+        "description": "If this is true, then this trigger must first be activated by giving the item the ItemStatusEffect `isActivated`",
         "type": "boolean"
       },
       "trigger_description": {

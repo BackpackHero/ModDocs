@@ -30,6 +30,12 @@
     },
     {
       "const": "inOpenSpaceRandom"
+    },
+    {
+      "const": "chooseItem"
+    },
+    {
+      "const": "sameSizeItem"
     }
   ],
   "description": "How an item will be created"
