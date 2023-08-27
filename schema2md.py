@@ -122,6 +122,30 @@ def ProcessSchema(schema, filename):
             field["Data Type"]=getType(data)
             fields.append(field)
 
+    if "patternProperties" in schema:
+        for pattern, data in schema["patternProperties"].items():
+            field = {}
+            field["Field Name"] = f"`<any {pattern}>`"
+
+            # Check if patternProperties are optional
+            if "minProperties" in schema and schema["minProperties"] >= 1:
+                field["Optional?"] = ""
+            else:
+                field["Optional?"] = ":material-check:"
+                
+            if "description" in data:
+                field["Description"] = data["description"]
+            else:
+                field["Description"] = "Pattern based property"
+                
+            if "default" in data:
+                if field["Description"] != "":
+                    field["Description"] += "<br>"
+                field["Description"] += f"**Default value**: `{str(data['default'])}`"
+                
+            field["Data Type"] = getType(data)
+            fields.append(field)
+
 
 print("Generating markdown for",sys.argv[1])
 schema=json.load(open(sys.argv[1]))

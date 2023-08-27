@@ -15,6 +15,7 @@ python schema2md.py schemas/ItemStatusEffect.schema.json schema_md_templates/gen
 python schema2md.py schemas/Modifier.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modifier.md"
 python schema2md.py schemas/AddModifier.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/AddModifier.md"
 python schema2md.py schemas/MovementEffect.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/MovementEffect.md"
+python schema2md.py schemas/ItemDefinition.schema.json schema_md_templates/ItemDefinition.md "docs/JSON_Reference/Items/ItemDefinition.md"
 
 python schema2md.py schemas/Modules/Movable.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/Movable.md"
 python schema2md.py schemas/Modules/Manastone.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/Manastone.md"
