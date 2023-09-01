@@ -4,8 +4,12 @@ extra_css: [assets/style.css]
 
 nav:
   - Home: index.md
-  - Installing Mods: Installing Mods.md
-  - Creating Mods: How_to_Create_Mods
+  - Installing Mods: Installing_Mods.md
+  - Creating Mods: 
+    - How_to_Create_Mods/Getting_Started.md
+    - How_to_Create_Mods/JSON_Introduction.md
+    - How_to_Create_Mods/Item_Basics.md
+    - How_to_Create_Mods/Publishing_your_Modpack.md
   - JSON Reference:
     - JSON_Reference/Modpack.md
     - Items: 
