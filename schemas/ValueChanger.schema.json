@@ -55,7 +55,7 @@
       "default":["board"],
       "type":"array",
       "items":{
-            "$ref": "Enum/AreaType.schema.json"
+            "$ref": "Enum/Area.schema.json"
       }
     },
     "area_distance": {

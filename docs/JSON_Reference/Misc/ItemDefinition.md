@@ -9,7 +9,9 @@ This is a special JSON object that is used by [`CreateEffect`](../Items/CreateEf
 
 The `ItemDefinition` object should consist of a single key:value pair, where the field name should match the `internal_name` of the target modpack which contains the item, and the value should match the `name` of the target item within that modpack.
 
-#TABLE#
+|Field Name|Optional?|            Description            |Data Type|
+|----------|---------|-----------------------------------|---------|
+|`<any .*>`|         |Item name within the target modpack| `string`|
 
 **Example usage:**
 
