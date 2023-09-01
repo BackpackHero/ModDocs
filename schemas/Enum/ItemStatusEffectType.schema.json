@@ -162,6 +162,15 @@
     },
     {
       "const": "statusEffectsAreConvertedToBurn"
+    },
+    {
+      "const": "cannotBePlacedAtEdge"
+    },
+    {
+      "const": "mustBePlacedAtEdge"
+    },
+    {
+      "const": "unique"
     }
   ],
   "description": ""

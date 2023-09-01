@@ -171,6 +171,21 @@
     },
     {
       "const": "NextTurnAP"
+    },
+    {
+      "const": "TransformItemSwitch"
+    },
+    {
+      "const": "storeCR8Charge"
+    },
+    {
+      "const": "resetComponentHeat"
+    },
+    {
+      "const": "changeComponenetHeat"
+    },
+    {
+      "const": "considerTestRecurison"
     }
   ],
   "description": ""

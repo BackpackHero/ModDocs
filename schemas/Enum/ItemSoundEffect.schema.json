@@ -24,6 +24,9 @@
     },
     {
       "const": "genericThud"
+    },
+    {
+      "const": "electricItem"
     }
   ],
   "description": "Sound Effect that is played when an item is used"

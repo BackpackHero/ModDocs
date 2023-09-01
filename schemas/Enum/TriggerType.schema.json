@@ -140,6 +140,9 @@
       "const": "whenLeftBehind"
     },
     {
+      "const": "onAlternateUse"
+    },
+    {
       "const": "whenNotPlayed"
     },
     {
@@ -150,6 +153,24 @@
     },
     {
       "const": "clearActivatedItems"
+    },
+    {
+      "const": "onUseUntilOverheat"
+    },
+    {
+      "const": "onOverheat"
+    },
+    {
+      "const": "onEnergyMove"
+    },
+    {
+      "const": "onHeatReset"
+    },
+    {
+      "const": "whenThisDestroys"
+    },
+    {
+      "const": "onUseUntilOverheatLate"
     }
   ],
   "description": ""
