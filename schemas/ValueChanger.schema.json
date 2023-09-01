@@ -18,7 +18,7 @@
       ]
     },
     "multiplier": {
-      "description": "The `ValueSource` gets multiplied by this value. Negative and decimal constants are supported. Like with `baseValue`, you can also insert another `ValueChanger` here to chain them together.",
+      "description": "The `ValueSource` gets multiplied by this value. Negative and decimal constants are supported. Like with `base_value`, you can also insert another `ValueChanger` here to chain them together.",
       "oneOf": [
         {
           "type": "number"
