@@ -1,0 +1,21 @@
+{
+  "$comment": "Enum",
+  "anyOf": [
+    {
+      "const": "inOrOutOfBattle"
+    },
+    {
+      "const": "inBattle"
+    },
+    {
+      "const": "outOfBattle"
+    },
+    {
+      "const": "duringCombatReward"
+    },
+    {
+      "const": "inAnEmptyRoom"
+    }
+  ],
+  "description": "Used with onAlternateUse to determine when an item can be used using the context menu"
+}

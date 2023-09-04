@@ -21,6 +21,7 @@ python schema2md.py schemas/ItemDefinition.schema.json schema_md_templates/ItemD
 python schema2md.py schemas/Modules/Movable.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/Movable.md"
 python schema2md.py schemas/Modules/Manastone.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/Manastone.md"
 python schema2md.py schemas/Modules/Carving.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/Carving.md"
+python schema2md.py schemas/Modules/AlternateUse.schema.json schema_md_templates/generic.md "docs/JSON_Reference/Items/Modules/AlternateUse.md"
 
 python schema2md.py schemas/Item.schema.json schema_md_templates/item.md "docs/JSON_Reference/Items/Item.md"
 python schema2md.py schemas/Item.schema.json schema_md_templates/item.md "docs/JSON_Reference/Items/index.md"

@@ -231,6 +231,10 @@
                     "description": "Properties about the item being movable with the cursor, e.g. playable on other items during combat. Not to be confused with `MovementEffects`, which move the item automatically based on a trigger.",
                     "$ref": "Modules/Movable.schema.json"
                 },
+                "alternate_use": {
+                    "description": "Properties about the triggers `onAlternateUse` and `onComboUse`. This can be used to set up costs and usage restrictions for those triggers. Optional",
+                    "$ref": "Modules/AlternateUse.schema.json"
+                },
                 "manastone": {
                     "description": "Properties about manastone functionality, like current and max mana. This is mandetory if the Item `type` includes `ManaStone`",
                     "$ref": "Modules/Manastone.schema.json"

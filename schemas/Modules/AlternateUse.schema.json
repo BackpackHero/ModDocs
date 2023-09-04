@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "use_costs": {
+            "description": "Object that contains the use costs, when using onAlternateUse or onComboUse",
+            "default": {
+                "energy": 0
+            },
+            "$ref": "../Costs.schema.json"
+        },
+        "animation": {
+            "description": "Player animation that gets played when the item is used,  when using onAlternateUse or onComboUse",
+            "default": "UseItem",
+            "$ref": "../Enum/AnimationType.schema.json"
+        },
+        "use_situation": {
+            "description": "Gameplay situation the item can be used in using onAlternateUse or onComboUse.",
+            "default":"inOrOutOfBattle",
+            "$ref": "../Enum/UseSituation.schema.json"    
+        }
+    }
+}
