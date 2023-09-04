@@ -12,7 +12,7 @@ To start modding Backpack Hero, you only need the following things:
         -  This extension adds auto-completion, useful templates, descriptions and validation for Mods to VSCode
 - **(Optional)** A graphics editor that supports transparency
     - *Aseprite, Paint.NET or GIMP work very well*
-- **(Optional)** The [BaseGameExports modpack](../assets/BaseGameExports_Version2.zip)
+- **(Optional)** The [BaseGameExports modpack](../assets/BaseGameExports_Version3.zip)
     - This modpack contains a lot of the items from the base game and can be used as a reference on how to implement more complex effects
 
 
@@ -46,7 +46,7 @@ Here's where it gets fun! Making simple items is not difficult if you know a bit
 
 **Step 2:** Create a file with the file extension `.item.json` and open it up in your editor. If you have a sprite for your item, place it in the same folder. If you do not, a placeholder sprite will be used.
 
-**Step 3:** Start making your item. For a rough overview of what's possible, check out [Item Basics](Item_Basics.md). If you're an advanced user, check out the [JSON Reference](../../JSON_Reference/Items/) for the full overview. <br>**You can also browse through the [BaseGameExports modpack](../assets/BaseGameExports_Version2.zip) to have a look at how we made some of your favorite base game items. A base game item or parts of it can make a great template for some cool modded items.**<br><br>
+**Step 3:** Start making your item. For a rough overview of what's possible, check out [Item Basics](Item_Basics.md). If you're an advanced user, check out the [JSON Reference](../../JSON_Reference/Items/) for the full overview. <br>**You can also browse through the [BaseGameExports modpack](../assets/BaseGameExports_Version3.zip) to have a look at how we made some of your favorite base game items. A base game item or parts of it can make a great template for some cool modded items.**<br><br>
 *Here's an example file for a basic sword to get you started:*
 ```json
 {
